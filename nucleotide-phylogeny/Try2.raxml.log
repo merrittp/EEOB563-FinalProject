@@ -1,0 +1,152 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 13-Apr-2020 23:00:03 as follows:
+
+raxml-ng --msa allspecies_insertions.phy --model partitions.txt --prefix Try2 --threads 4 --seed 5 -tree pars{30},rand{30}
+
+Analysis options:
+  run mode: ML tree search
+  start tree(s): random (30) + parsimony (30)
+  random seed: 5
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX
+  parallelization: PTHREADS (4 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: allspecies_insertions.phy
+[00:00:00] Loaded alignment with 5 taxa and 11347 sites
+
+Alignment comprises 6 partitions and 1793 patterns
+
+Partition 0: rnl
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 4395 / 563
+Gaps: 36.07 %
+Invariant sites: 69.26 %
+
+Partition 1: rns
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 2131 / 327
+Gaps: 34.83 %
+Invariant sites: 66.17 %
+
+Partition 2: cob
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1287 / 260
+Gaps: 7.91 %
+Invariant sites: 55.32 %
+
+Partition 3: cox1
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1632 / 247
+Gaps: 2.98 %
+Invariant sites: 62.32 %
+
+Partition 4: cox2
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1105 / 233
+Gaps: 23.62 %
+Invariant sites: 59.73 %
+
+Partition 5: cox3
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 797 / 163
+Gaps: 1.00 %
+Invariant sites: 55.96 %
+
+
+NOTE: Binary MSA file created: Try2.raxml.rba
+
+[00:00:00] Generating 30 random starting tree(s) with 5 taxa
+[00:00:00] Generating 30 parsimony starting tree(s) with 5 taxa
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 3 / 449 / 7184
+
+Starting ML tree search with 60 distinct starting trees
+
+[00:00:07] ML tree search #1, logLikelihood: -35755.102537
+[00:00:15] ML tree search #2, logLikelihood: -35755.224369
+[00:00:22] ML tree search #3, logLikelihood: -35755.102537
+[00:00:29] ML tree search #4, logLikelihood: -35755.052984
+[00:00:35] ML tree search #5, logLikelihood: -35755.040792
+[00:00:41] ML tree search #6, logLikelihood: -35755.040792
+[00:00:50] ML tree search #7, logLikelihood: -35755.073434
+[00:01:00] ML tree search #8, logLikelihood: -35755.068715
+[00:01:05] ML tree search #9, logLikelihood: -35755.281796
+[00:01:12] ML tree search #10, logLikelihood: -35755.232035
+[00:01:19] ML tree search #11, logLikelihood: -35755.052984
+[00:01:27] ML tree search #12, logLikelihood: -35755.062306
+[00:01:34] ML tree search #13, logLikelihood: -35754.999954
+[00:01:41] ML tree search #14, logLikelihood: -35755.062306
+[00:01:49] ML tree search #15, logLikelihood: -35755.062306
+[00:01:57] ML tree search #16, logLikelihood: -35755.102537
+[00:02:04] ML tree search #17, logLikelihood: -35755.102537
+[00:02:12] ML tree search #18, logLikelihood: -35755.224369
+[00:02:19] ML tree search #19, logLikelihood: -35755.073434
+[00:02:26] ML tree search #20, logLikelihood: -35754.999954
+[00:02:31] ML tree search #21, logLikelihood: -35755.281796
+[00:02:37] ML tree search #22, logLikelihood: -35755.113823
+[00:02:45] ML tree search #23, logLikelihood: -35755.073434
+[00:02:53] ML tree search #24, logLikelihood: -35755.073668
+[00:03:00] ML tree search #25, logLikelihood: -35755.052984
+[00:03:08] ML tree search #26, logLikelihood: -35755.055730
+[00:03:16] ML tree search #27, logLikelihood: -35755.073668
+[00:03:24] ML tree search #28, logLikelihood: -35755.073668
+[00:03:32] ML tree search #29, logLikelihood: -35755.073434
+[00:03:40] ML tree search #30, logLikelihood: -35755.073434
+[00:03:45] ML tree search #31, logLikelihood: -35755.441354
+[00:03:54] ML tree search #32, logLikelihood: -35755.297978
+[00:03:59] ML tree search #33, logLikelihood: -35755.272127
+[00:04:05] ML tree search #34, logLikelihood: -35755.212043
+[00:04:10] ML tree search #35, logLikelihood: -35755.332199
+[00:04:17] ML tree search #36, logLikelihood: -35755.279442
+[00:04:22] ML tree search #37, logLikelihood: -35755.276813
+[00:04:27] ML tree search #38, logLikelihood: -35755.441354
+[00:04:32] ML tree search #39, logLikelihood: -35755.118175
+[00:04:37] ML tree search #40, logLikelihood: -35755.225687
+[00:04:42] ML tree search #41, logLikelihood: -35755.272069
+[00:04:49] ML tree search #42, logLikelihood: -35755.238238
+[00:05:00] ML tree search #43, logLikelihood: -35755.406649
+[00:05:05] ML tree search #44, logLikelihood: -35755.252449
+[00:05:11] ML tree search #45, logLikelihood: -35755.152018
+[00:05:15] ML tree search #46, logLikelihood: -35755.175193
+[00:05:21] ML tree search #47, logLikelihood: -35755.349800
+[00:05:27] ML tree search #48, logLikelihood: -35755.252449
+[00:05:32] ML tree search #49, logLikelihood: -35755.254420
+[00:05:43] ML tree search #50, logLikelihood: -35755.319500
+[00:05:48] ML tree search #51, logLikelihood: -35755.274162
+[00:05:54] ML tree search #52, logLikelihood: -35755.253001
+[00:06:00] ML tree search #53, logLikelihood: -35755.329236
+[00:06:05] ML tree search #54, logLikelihood: -35755.210362
+[00:06:11] ML tree search #55, logLikelihood: -35755.212043
+[00:06:17] ML tree search #56, logLikelihood: -35755.274162
+[00:06:25] ML tree search #57, logLikelihood: -35755.309383
+[00:06:35] ML tree search #58, logLikelihood: -35755.313662
+[00:06:40] ML tree search #59, logLikelihood: -35755.234590
+[00:06:51] ML tree search #60, logLikelihood: -35755.319500
+
+
+Final LogLikelihood: -35754.999954
+
+AIC score: 71701.999907 / AICc score: 71703.655374 / BIC score: 72406.323940
+Free parameters (model + branch lengths): 96
+
+Best ML tree saved to: /home/merrittp/EEOB563-FinalProject/nucleotide-phylogeny/Try2.raxml.bestTree
+All ML trees saved to: /home/merrittp/EEOB563-FinalProject/nucleotide-phylogeny/Try2.raxml.mlTrees
+Optimized model saved to: /home/merrittp/EEOB563-FinalProject/nucleotide-phylogeny/Try2.raxml.bestModel
+
+Execution log saved to: /home/merrittp/EEOB563-FinalProject/nucleotide-phylogeny/Try2.raxml.log
+
+Analysis started: 13-Apr-2020 23:00:03 / finished: 13-Apr-2020 23:06:55
+
+Elapsed time: 411.816 seconds
+
