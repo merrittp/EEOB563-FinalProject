@@ -1,0 +1,44 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 13-Apr-2020 22:33:00 as follows:
+
+raxml-ng --check --msa allgenes_allspecies_insertions.aln --model GTR+R --prefix test
+
+Analysis options:
+  run mode: Alignment validation
+  start tree(s): 
+  random seed: 1586835180
+  SIMD kernels: AVX
+  parallelization: PTHREADS (16 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: allgenes_allspecies_insertions.aln
+[00:00:00] Loaded alignment with 5 taxa and 11348 sites
+
+WARNING: Fully undetermined columns found: 1
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/merrittp/EEOB563-FinalProject/nucleotide-phylogeny/test.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 11347 patterns
+
+Partition 0: noname
+Model: GTR+FO+R4
+Alignment sites / patterns: 11347 / 11347
+Gaps: 24.21 %
+Invariant sites: 64.24 %
+
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /home/merrittp/EEOB563-FinalProject/nucleotide-phylogeny/test.raxml.log
+
+Analysis started: 13-Apr-2020 22:33:00 / finished: 13-Apr-2020 22:33:00
+
+Elapsed time: 0.014 seconds
+

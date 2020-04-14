@@ -1,0 +1,53 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 13-Apr-2020 22:34:25 as follows:
+
+raxml-ng --parse --msa allspecies_insertions.phy --model GTR+G --prefix parsing
+
+Analysis options:
+  run mode: Alignment parsing and compression
+  start tree(s): 
+  random seed: 1586835265
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX
+  parallelization: PTHREADS (16 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: allspecies_insertions.phy
+[00:00:00] Loaded alignment with 5 taxa and 11347 sites
+
+Alignment comprises 1 partitions and 914 patterns
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites / patterns: 11347 / 914
+Gaps: 24.21 %
+Invariant sites: 64.24 %
+
+
+NOTE: Binary MSA file created: parsing.raxml.rba
+
+* Estimated memory requirements                : 1 MB
+
+* Recommended number of threads / MPI processes: 4
+
+Please note that numbers given above are rough estimates only. 
+Actual memory consumption and parallel performance on your system may differ!
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /home/merrittp/EEOB563-FinalProject/nucleotide-phylogeny/parsing.raxml.log
+
+Analysis started: 13-Apr-2020 22:34:25 / finished: 13-Apr-2020 22:34:25
+
+Elapsed time: 0.009 seconds
+
