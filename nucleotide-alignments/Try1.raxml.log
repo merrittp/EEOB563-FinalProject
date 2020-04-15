@@ -1,0 +1,21 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 13-Apr-2020 22:56:04 as follows:
+
+raxml-ng --rfdist --tree mltrees --prefix Try1
+
+Analysis options:
+  run mode: RF distance computation
+  start tree(s): user
+  random seed: 1586836564
+  SIMD kernels: AVX
+  parallelization: PTHREADS (16 threads), thread pinning: OFF
+
+
+ERROR: File not found: mltrees
+

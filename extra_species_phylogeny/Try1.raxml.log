@@ -1,0 +1,77 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 14-Apr-2020 19:06:18 as follows:
+
+raxml-ng --check -msa gDNA_all_2566.aln --model partitions.txt --prefix Try1
+
+Analysis options:
+  run mode: Alignment validation
+  start tree(s): 
+  random seed: 1586909178
+  SIMD kernels: AVX
+  parallelization: PTHREADS (16 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: gDNA_all_2566.aln
+[00:00:00] Loaded alignment with 6 taxa and 11384 sites
+
+WARNING: Fully undetermined columns found: 1
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/merrittp/EEOB563-FinalProject/extra_species_phylogeny/Try1.raxml.reduced.phy
+
+NOTE: The corresponding reduced partition file was saved to:
+/home/merrittp/EEOB563-FinalProject/extra_species_phylogeny/Try1.raxml.reduced.partition
+
+Alignment comprises 6 partitions and 11383 patterns
+
+Partition 0: rnl
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 4405 / 4405
+Gaps: 43.04 %
+Invariant sites: 68.79 %
+
+Partition 1: rns
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 2130 / 2130
+Gaps: 41.23 %
+Invariant sites: 65.54 %
+
+Partition 2: cob
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1287 / 1287
+Gaps: 8.42 %
+Invariant sites: 53.38 %
+
+Partition 3: cox1
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1638 / 1638
+Gaps: 3.36 %
+Invariant sites: 22.89 %
+
+Partition 4: cox2
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1125 / 1125
+Gaps: 26.67 %
+Invariant sites: 38.84 %
+
+Partition 5: cox3
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 798 / 798
+Gaps: 1.19 %
+Invariant sites: 55.14 %
+
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /home/merrittp/EEOB563-FinalProject/extra_species_phylogeny/Try1.raxml.log
+
+Analysis started: 14-Apr-2020 19:06:18 / finished: 14-Apr-2020 19:06:18
+
+Elapsed time: 0.016 seconds
+

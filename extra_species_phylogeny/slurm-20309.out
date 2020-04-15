@@ -1,0 +1,78 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 14-Apr-2020 19:10:57 as follows:
+
+raxml-ng --all --msa gDNA_all_2566.phy --model partitions.txt --prefix Try2 --seed 5 --threads 4 --bs-metric fbp,tbe
+
+Analysis options:
+  run mode: ML tree search + bootstrapping (Felsenstein Bootstrap + Transfer Bootstrap)
+  start tree(s): random (10) + parsimony (10)
+  bootstrap replicates: max: 1000 + bootstopping (autoMRE, cutoff: 0.030000)
+  random seed: 5
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX
+  parallelization: PTHREADS (4 threads), thread pinning: OFF
+
+WARNING: The model you specified on the command line (partitions.txt) will be ignored 
+         since the binary MSA file already contains a model definition.
+         If you want to change the model, please re-run RAxML-NG 
+         with the original PHYLIP/FASTA alignment and --redo option.
+
+[00:00:00] Loading binary alignment from file: Try2.raxml.rba
+[00:00:00] Alignment comprises 6 taxa, 6 partitions and 2399 patterns
+
+Partition 0: rnl
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 4405 / 753
+Gaps: 43.04 %
+Invariant sites: 68.79 %
+
+Partition 1: rns
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 2131 / 452
+Gaps: 41.25 %
+Invariant sites: 65.56 %
+
+Partition 2: cob
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1287 / 334
+Gaps: 8.35 %
+Invariant sites: 53.30 %
+
+Partition 3: cox1
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1638 / 363
+Gaps: 3.38 %
+Invariant sites: 22.89 %
+
+Partition 4: cox2
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1125 / 295
+Gaps: 26.68 %
+Invariant sites: 38.84 %
+
+Partition 5: cox3
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 797 / 202
+Gaps: 1.13 %
+Invariant sites: 55.21 %
+
+
+[00:00:00] NOTE: Resuming execution from checkpoint (logLH: -45145.74, ML trees: 0, bootstraps: 0)
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 3 / 600 / 9600
+
+Starting ML tree search with 20 distinct starting trees
+
+terminate called recursively
+terminate called after throwing an instance of 'std::runtime_error'
+terminate called recursively
+  what():  ./slurm.sh: line 1: 26728 Aborted                 (core dumped) raxml-ng --all --msa gDNA_all_2566.phy --model partitions.txt --prefix Try2 --seed 5 --threads 4 --bs-metric fbp,tbe
