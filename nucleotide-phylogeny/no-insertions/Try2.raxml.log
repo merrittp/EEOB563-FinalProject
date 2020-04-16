@@ -1,0 +1,83 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 15-Apr-2020 19:36:55 as follows:
+
+raxml-ng --parse --msa allgenes-no-insertions.phy --model partitions.txt --prefix Try2
+
+Analysis options:
+  run mode: Alignment parsing and compression
+  start tree(s): 
+  random seed: 1586997415
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX
+  parallelization: PTHREADS (16 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: allgenes-no-insertions.phy
+[00:00:00] Loaded alignment with 5 taxa and 9380 sites
+
+Alignment comprises 6 partitions and 1698 patterns
+
+Partition 0: rnl
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 3146 / 515
+Gaps: 19.49 %
+Invariant sites: 58.52 %
+
+Partition 1: rns
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1471 / 295
+Gaps: 15.66 %
+Invariant sites: 53.09 %
+
+Partition 2: cob
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1287 / 261
+Gaps: 7.96 %
+Invariant sites: 55.24 %
+
+Partition 3: cox1
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1632 / 247
+Gaps: 2.98 %
+Invariant sites: 62.38 %
+
+Partition 4: cox2
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1047 / 217
+Gaps: 21.57 %
+Invariant sites: 61.99 %
+
+Partition 5: cox3
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 797 / 163
+Gaps: 1.00 %
+Invariant sites: 55.96 %
+
+
+NOTE: Binary MSA file created: Try2.raxml.rba
+
+* Estimated memory requirements                : 2 MB
+
+* Recommended number of threads / MPI processes: 5
+
+Please note that numbers given above are rough estimates only. 
+Actual memory consumption and parallel performance on your system may differ!
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /home/merrittp/EEOB563-Spring2020-Project/EEOB563-FinalProject/nucleotide-phylogeny/no-insertions/Try2.raxml.log
+
+Analysis started: 15-Apr-2020 19:36:55 / finished: 15-Apr-2020 19:36:55
+
+Elapsed time: 0.009 seconds
+

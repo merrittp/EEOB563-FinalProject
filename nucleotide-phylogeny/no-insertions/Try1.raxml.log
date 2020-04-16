@@ -1,0 +1,77 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 15-Apr-2020 19:35:53 as follows:
+
+raxml-ng --check --msa allspecies-no-insertions.aln --model partitions.txt --prefix Try1
+
+Analysis options:
+  run mode: Alignment validation
+  start tree(s): 
+  random seed: 1586997353
+  SIMD kernels: AVX
+  parallelization: PTHREADS (16 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: allspecies-no-insertions.aln
+[00:00:00] Loaded alignment with 5 taxa and 9381 sites
+
+WARNING: Fully undetermined columns found: 1
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/merrittp/EEOB563-Spring2020-Project/EEOB563-FinalProject/nucleotide-phylogeny/no-insertions/Try1.raxml.reduced.phy
+
+NOTE: The corresponding reduced partition file was saved to:
+/home/merrittp/EEOB563-Spring2020-Project/EEOB563-FinalProject/nucleotide-phylogeny/no-insertions/Try1.raxml.reduced.partition
+
+Alignment comprises 6 partitions and 9380 patterns
+
+Partition 0: rnl
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 3146 / 3146
+Gaps: 19.49 %
+Invariant sites: 58.52 %
+
+Partition 1: rns
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1471 / 1471
+Gaps: 15.66 %
+Invariant sites: 53.09 %
+
+Partition 2: cob
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1287 / 1287
+Gaps: 7.96 %
+Invariant sites: 55.24 %
+
+Partition 3: cox1
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1632 / 1632
+Gaps: 2.98 %
+Invariant sites: 62.38 %
+
+Partition 4: cox2
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 1046 / 1046
+Gaps: 21.55 %
+Invariant sites: 62.05 %
+
+Partition 5: cox3
+Model: GTR+FO+R4+B
+Alignment sites / patterns: 798 / 798
+Gaps: 1.05 %
+Invariant sites: 55.89 %
+
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /home/merrittp/EEOB563-Spring2020-Project/EEOB563-FinalProject/nucleotide-phylogeny/no-insertions/Try1.raxml.log
+
+Analysis started: 15-Apr-2020 19:35:53 / finished: 15-Apr-2020 19:35:53
+
+Elapsed time: 0.017 seconds
+
