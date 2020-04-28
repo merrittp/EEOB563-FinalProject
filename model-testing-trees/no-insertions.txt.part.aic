@@ -1,0 +1,6 @@
+GTR+G4, rnl = 1-3146
+GTR+G4, rns = 3147-4617
+GTR+I+G4, cob = 4618-5904
+HKY+I+G4, cox1 = 5905-7536
+HKY+I, cox2 = 7537-8583
+HKY+G4, cox3 = 8584-9380
