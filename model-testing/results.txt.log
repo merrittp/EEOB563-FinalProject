@@ -1,0 +1,974 @@
+Physical cores: 2
+Logical cores:  4
+Memory:         8GB
+Extensions:     AVX
+
+WARNING: MSA has not enough sites to infer reliable results
+WARNING: MSA has not enough sites to infer reliable results
+WARNING: MSA has not enough sites to infer reliable results
+WARNING: MSA has not enough sites to infer reliable results
+WARNING: MSA has not enough sites to infer reliable results
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: results.txt.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG vx.y.z
+
+Input data:
+  MSA:        allspecies_insertions.phy
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            5
+  #sites:           11347
+  #patterns (sum):  1793
+  Max. thread mem:  1 MB
+
+Output:
+  Log:           results.txt.log
+  Starting tree: results.txt.tree
+  Results:       results.txt.out
+
+Selection options:
+  # dna schemes:      3
+  # dna models:       12
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     false
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          1/2
+  RNG seed:         12345
+  subtree repeats:  enabled
+Partitions:    insert-partitions.txt
+               6 partitions
+                  6 DNA partitions
+--------------------------------------------------------------------------------
+modeltest was called as follows: 
+>> modeltest-ng -d nt -i allspecies_insertions.phy -o results.txt -q insert-partitions.txt -f e -h uigf -T raxml 
+
+
+modeltest: Warning: You are using one single thread out of 2 physical cores.
+modeltest:          You can set the number of threads with -p argument.
+modeltest: Try 'modeltest --help' or 'modeltest --usage' for more information
+
+Partition 1/6
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:00:01
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9    -12270.7644     24690.9162         0.0000    0.9729
+       2  GTR+I              9    -12274.8898     24699.1669         8.2507    0.0157
+       3  GTR+I+G4          10    -12270.5403     24699.8046         8.8884    0.0114
+       4  HKY+G4             5    -12302.1408     24716.3221        25.4059    0.0000
+       5  HKY+I              5    -12305.5769     24723.1943        32.2781    0.0000
+       6  HKY+I+G4           6    -12302.1707     24725.7186        34.8025    0.0000
+       7  GTR                8    -12357.8133     24855.6772       164.7610    0.0000
+       8  HKY                4    -12389.4593     24881.6225       190.7063    0.0000
+       9  F81+I              4    -12547.6171     25197.9380       507.0219    0.0000
+      10  F81+G4             4    -12549.9798     25202.6634       511.7473    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              GTR+G4
+lnL:                -12270.7644
+Frequencies:        0.3290 0.1557 0.2509 0.2644
+Subst. Rates:       0.7395 3.6831 1.5869 0.2455 6.5288 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.5693
+Score:              24690.9162
+Weight:             0.9729
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0157
+Gamma:              0.9729
+Gamma-Inv:          0.0114
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3610
+Alpha:              0.5693
+Alpha-P.Inv:        0.6193
+P.Inv-Alpha:        0.0212
+Frequencies:        0.3289 0.1557 0.2509 0.2645 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model GTR+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m GTR+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9    -12270.7644     24573.5288         0.0000    0.6773
+       2  GTR+I+G4          10    -12270.5403     24575.0806         1.5517    0.3118
+       3  GTR+I              9    -12274.8898     24581.7795         8.2507    0.0109
+       4  HKY+G4             5    -12302.1408     24628.2816        54.7528    0.0000
+       5  HKY+I+G4           6    -12302.1707     24630.3414        56.8126    0.0000
+       6  HKY+I              5    -12305.5769     24635.1538        61.6249    0.0000
+       7  GTR                8    -12357.8133     24745.6266       172.0977    0.0000
+       8  HKY                4    -12389.4593     24800.9187       227.3898    0.0000
+       9  F81+I              4    -12547.6171     25117.2342       543.7054    0.0000
+      10  F81+G4             4    -12549.9798     25121.9596       548.4308    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+G4
+lnL:                -12270.7644
+Frequencies:        0.3290 0.1557 0.2509 0.2644
+Subst. Rates:       0.7395 3.6831 1.5869 0.2455 6.5288 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.5693
+Score:              24573.5288
+Weight:             0.6773
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0109
+Gamma:              0.6773
+Gamma-Inv:          0.3118
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3610
+Alpha:              0.5693
+Alpha-P.Inv:        0.6193
+P.Inv-Alpha:        0.0212
+Frequencies:        0.3289 0.1557 0.2509 0.2645 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model GTR+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m GTR+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9    -12270.7644     24573.5288         0.0000    0.6773
+       2  GTR+I+G4          10    -12270.5403     24575.0806         1.5517    0.3118
+       3  GTR+I              9    -12274.8898     24581.7795         8.2507    0.0109
+       4  HKY+G4             5    -12302.1408     24628.2816        54.7528    0.0000
+       5  HKY+I+G4           6    -12302.1707     24630.3414        56.8126    0.0000
+       6  HKY+I              5    -12305.5769     24635.1538        61.6249    0.0000
+       7  GTR                8    -12357.8133     24745.6266       172.0977    0.0000
+       8  HKY                4    -12389.4593     24800.9187       227.3898    0.0000
+       9  F81+I              4    -12547.6171     25117.2342       543.7054    0.0000
+      10  F81+G4             4    -12549.9798     25121.9596       548.4308    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+G4
+lnL:                -12270.7644
+Frequencies:        0.3290 0.1557 0.2509 0.2644
+Subst. Rates:       0.7395 3.6831 1.5869 0.2455 6.5288 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.5693
+Score:              24573.5288
+Weight:             0.6773
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0109
+Gamma:              0.6773
+Gamma-Inv:          0.3118
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3610
+Alpha:              0.5693
+Alpha-P.Inv:        0.6193
+P.Inv-Alpha:        0.0212
+Frequencies:        0.3289 0.1557 0.2509 0.2645 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model GTR+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m GTR+G4
+
+Partition 2/6
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:00:02
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+G4             5     -6194.7296     12501.4997         0.0000    0.9462
+       2  GTR+G4             9     -6179.1602     12507.7077         6.2080    0.0425
+       3  HKY+I+G4           6     -6194.9223     12511.2219         9.7222    0.0073
+       4  HKY+I              5     -6200.4824     12513.0053        11.5056    0.0030
+       5  GTR+I              9     -6183.3369     12516.0611        14.5614    0.0007
+       6  GTR+I+G4          10     -6179.1772     12517.0784        15.5787    0.0004
+       7  GTR                8     -6221.1521     12582.3547        80.8551    0.0000
+       8  HKY                4     -6244.4347     12591.5731        90.0734    0.0000
+       9  F81+G4             4     -6323.5022     12749.7082       248.2085    0.0000
+      10  F81+I              4     -6325.3059     12753.3156       251.8159    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              HKY+G4
+lnL:                -6194.7296
+Frequencies:        0.3089 0.1502 0.2481 0.2929
+Subst. Rates:       1.0000 4.8655 1.0000 1.0000 4.8655 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.6417
+Score:              12501.4997
+Weight:             0.9462
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0037
+Gamma:              0.9886
+Gamma-Inv:          0.0077
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3215
+Alpha:              0.6406
+Alpha-P.Inv:        0.8412
+P.Inv-Alpha:        0.1063
+Frequencies:        0.3091 0.1501 0.2485 0.2923 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 010010 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model HKY+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m HKY+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9     -6179.1602     12390.3204         0.0000    0.7262
+       2  GTR+I+G4          10     -6179.1772     12392.3544         2.0340    0.2626
+       3  GTR+I              9     -6183.3369     12398.6738         8.3534    0.0111
+       4  HKY+G4             5     -6194.7296     12413.4592        23.1388    0.0000
+       5  HKY+I+G4           6     -6194.9223     12415.8446        25.5243    0.0000
+       6  HKY+I              5     -6200.4824     12424.9648        34.6444    0.0000
+       7  GTR                8     -6221.1521     12472.3041        81.9838    0.0000
+       8  HKY                4     -6244.4347     12510.8693       120.5489    0.0000
+       9  F81+G4             4     -6323.5022     12669.0044       278.6840    0.0000
+      10  F81+I+G4           5     -6323.5615     12671.1230       280.8026    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+G4
+lnL:                -6179.1602
+Frequencies:        0.3127 0.1491 0.2580 0.2803
+Subst. Rates:       0.6426 3.7036 1.5041 0.3228 6.8656 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.6155
+Score:              12390.3204
+Weight:             0.7262
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0111
+Gamma:              0.7262
+Gamma-Inv:          0.2627
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3110
+Alpha:              0.6155
+Alpha-P.Inv:        0.9595
+P.Inv-Alpha:        0.1123
+Frequencies:        0.3126 0.1492 0.2580 0.2802 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model GTR+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m GTR+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9     -6179.1602     12390.3204         0.0000    0.7262
+       2  GTR+I+G4          10     -6179.1772     12392.3544         2.0340    0.2626
+       3  GTR+I              9     -6183.3369     12398.6738         8.3534    0.0111
+       4  HKY+G4             5     -6194.7296     12413.4592        23.1388    0.0000
+       5  HKY+I+G4           6     -6194.9223     12415.8446        25.5243    0.0000
+       6  HKY+I              5     -6200.4824     12424.9648        34.6444    0.0000
+       7  GTR                8     -6221.1521     12472.3041        81.9838    0.0000
+       8  HKY                4     -6244.4347     12510.8693       120.5489    0.0000
+       9  F81+G4             4     -6323.5022     12669.0044       278.6840    0.0000
+      10  F81+I+G4           5     -6323.5615     12671.1230       280.8026    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+G4
+lnL:                -6179.1602
+Frequencies:        0.3127 0.1491 0.2580 0.2803
+Subst. Rates:       0.6426 3.7036 1.5041 0.3228 6.8656 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.6155
+Score:              12390.3204
+Weight:             0.7262
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0111
+Gamma:              0.7262
+Gamma-Inv:          0.2627
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3110
+Alpha:              0.6155
+Alpha-P.Inv:        0.9595
+P.Inv-Alpha:        0.1123
+Frequencies:        0.3126 0.1492 0.2580 0.2802 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model GTR+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m GTR+G4
+
+Partition 3/6
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:00:02
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+G4             5     -4885.0535      9882.1476         0.0000    0.7386
+       2  HKY+I              5     -4886.1653      9884.3711         2.2235    0.2430
+       3  HKY+I+G4           6     -4884.0747      9889.5265         7.3790    0.0185
+       4  GTR+I              9     -4881.3558      9912.0989        29.9514    0.0000
+       5  GTR+I+G4          10     -4879.2174      9917.1589        35.0113    0.0000
+       6  GTR+G4             9     -4888.0855      9925.5583        43.4107    0.0000
+       7  HKY                4     -4963.6668     10030.0373       147.8898    0.0000
+       8  GTR                8     -4953.7806     10047.6119       165.4644    0.0000
+       9  F81+I              4     -5007.7887     10118.2812       236.1336    0.0000
+      10  F81+G4             4     -5007.8157     10118.3353       236.1877    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              HKY+G4
+lnL:                -4885.0535
+Frequencies:        0.2832 0.1304 0.2350 0.3513
+Subst. Rates:       1.0000 4.6335 1.0000 1.0000 4.6335 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.5464
+Score:              9882.1476
+Weight:             0.7386
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2430
+Gamma:              0.7386
+Gamma-Inv:          0.0185
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3848
+Alpha:              0.5464
+Alpha-P.Inv:        1.0822
+P.Inv-Alpha:        0.2258
+Frequencies:        0.2832 0.1304 0.2347 0.3517 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 010010 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model HKY+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m HKY+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10     -4879.2174      9792.4349         0.0000    0.4308
+       2  HKY+G4             5     -4885.0535      9794.1071         1.6722    0.1867
+       3  HKY+I+G4           6     -4884.0747      9794.1493         1.7145    0.1828
+       4  GTR+I              9     -4881.3558      9794.7116         2.2767    0.1380
+       5  HKY+I              5     -4886.1653      9796.3306         3.8957    0.0614
+       6  GTR+G4             9     -4888.0855      9808.1709        15.7361    0.0002
+       7  GTR                8     -4953.7806      9937.5613       145.1264    0.0000
+       8  HKY                4     -4963.6668      9949.3335       156.8987    0.0000
+       9  F81+I              4     -5007.7887     10037.5774       245.1425    0.0000
+      10  F81+G4             4     -5007.8157     10037.6315       245.1966    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -4879.2174
+Frequencies:        0.2764 0.1292 0.2343 0.3601
+Subst. Rates:       2.0793 8.7052 1.8611 2.4456 6.9352 1.0000 
+Inv. sites prop:    0.1614
+Gamma shape:        0.8233
+Score:              9792.4349
+Weight:             0.4308
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1994
+Gamma:              0.1869
+Gamma-Inv:          0.6137
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3939
+Alpha:              0.5463
+Alpha-P.Inv:        0.9004
+P.Inv-Alpha:        0.1806
+Frequencies:        0.2795 0.1297 0.2341 0.3566 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model GTR+I+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m GTR+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10     -4879.2174      9792.4349         0.0000    0.4308
+       2  HKY+G4             5     -4885.0535      9794.1071         1.6722    0.1867
+       3  HKY+I+G4           6     -4884.0747      9794.1493         1.7145    0.1828
+       4  GTR+I              9     -4881.3558      9794.7116         2.2767    0.1380
+       5  HKY+I              5     -4886.1653      9796.3306         3.8957    0.0614
+       6  GTR+G4             9     -4888.0855      9808.1709        15.7361    0.0002
+       7  GTR                8     -4953.7806      9937.5613       145.1264    0.0000
+       8  HKY                4     -4963.6668      9949.3335       156.8987    0.0000
+       9  F81+I              4     -5007.7887     10037.5774       245.1425    0.0000
+      10  F81+G4             4     -5007.8157     10037.6315       245.1966    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+I+G4
+lnL:                -4879.2174
+Frequencies:        0.2764 0.1292 0.2343 0.3601
+Subst. Rates:       2.0793 8.7052 1.8611 2.4456 6.9352 1.0000 
+Inv. sites prop:    0.1614
+Gamma shape:        0.8233
+Score:              9792.4349
+Weight:             0.4308
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1994
+Gamma:              0.1869
+Gamma-Inv:          0.6137
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3939
+Alpha:              0.5463
+Alpha-P.Inv:        0.9004
+P.Inv-Alpha:        0.1806
+Frequencies:        0.2795 0.1297 0.2341 0.3566 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model GTR+I+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m GTR+I+G4
+
+Partition 4/6
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:00:03
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+I              5     -5674.9383     11461.9172         0.0000    0.4944
+       2  HKY+G4             5     -5674.9513     11461.9431         0.0259    0.4880
+       3  HKY+I+G4           6     -5673.6072     11468.5916         6.6744    0.0176
+       4  GTR+G4             9     -5677.0143     11503.4160        41.4988    0.0000
+       5  GTR+I              9     -5678.0246     11505.4366        43.5194    0.0000
+       6  GTR+I+G4          10     -5673.7422     11506.2084        44.2912    0.0000
+       7  HKY                4     -5798.4422     11699.5882       237.6710    0.0000
+       8  F81+G4             4     -5803.8575     11710.4189       248.5017    0.0000
+       9  F81+I              4     -5803.9258     11710.5554       248.6382    0.0000
+      10  GTR                8     -5787.8817     11715.8141       253.8969    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              HKY+I
+lnL:                -5674.9383
+Frequencies:        0.2775 0.1427 0.2248 0.3550
+Subst. Rates:       1.0000 4.2671 1.0000 1.0000 4.2671 1.0000 
+Inv. sites prop:    0.5165
+Gamma shape:        -
+Score:              11461.9172
+Weight:             0.4944
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.4944
+Gamma:              0.4880
+Gamma-Inv:          0.0176
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.5165
+Alpha:              0.3550
+Alpha-P.Inv:        1.1714
+P.Inv-Alpha:        0.3909
+Frequencies:        0.2782 0.1432 0.2256 0.3530 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 010010 -f m -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -c 1 -m GTRCATIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model HKY+I
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m HKY+I
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+I+G4           6     -5673.6072     11373.2144         0.0000    0.4090
+       2  HKY+I              5     -5674.9383     11373.8767         0.6623    0.2937
+       3  HKY+G4             5     -5674.9513     11373.9026         0.6882    0.2899
+       4  GTR+I+G4          10     -5673.7422     11381.4843         8.2699    0.0065
+       5  GTR+G4             9     -5677.0143     11386.0287        12.8143    0.0007
+       6  GTR+I              9     -5678.0246     11388.0493        14.8349    0.0002
+       7  GTR                8     -5787.8817     11605.7635       232.5491    0.0000
+       8  HKY                4     -5798.4422     11618.8844       245.6701    0.0000
+       9  F81+G4             4     -5803.8575     11629.7151       256.5007    0.0000
+      10  F81+I              4     -5803.9258     11629.8516       256.6372    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              HKY+I+G4
+lnL:                -5673.6072
+Frequencies:        0.2792 0.1431 0.2258 0.3519
+Subst. Rates:       1.0000 4.6603 1.0000 1.0000 4.6603 1.0000 
+Inv. sites prop:    0.3909
+Gamma shape:        1.1714
+Score:              11373.2144
+Weight:             0.4090
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2939
+Gamma:              0.2906
+Gamma-Inv:          0.4155
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.5165
+Alpha:              0.3548
+Alpha-P.Inv:        1.1908
+P.Inv-Alpha:        0.3928
+Frequencies:        0.2786 0.1430 0.2258 0.3525 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 010010 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model HKY+I+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m HKY+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+I+G4           6     -5673.6072     11373.2144         0.0000    0.4090
+       2  HKY+I              5     -5674.9383     11373.8767         0.6623    0.2937
+       3  HKY+G4             5     -5674.9513     11373.9026         0.6882    0.2899
+       4  GTR+I+G4          10     -5673.7422     11381.4843         8.2699    0.0065
+       5  GTR+G4             9     -5677.0143     11386.0287        12.8143    0.0007
+       6  GTR+I              9     -5678.0246     11388.0493        14.8349    0.0002
+       7  GTR                8     -5787.8817     11605.7635       232.5491    0.0000
+       8  HKY                4     -5798.4422     11618.8844       245.6701    0.0000
+       9  F81+G4             4     -5803.8575     11629.7151       256.5007    0.0000
+      10  F81+I              4     -5803.9258     11629.8516       256.6372    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              HKY+I+G4
+lnL:                -5673.6072
+Frequencies:        0.2792 0.1431 0.2258 0.3519
+Subst. Rates:       1.0000 4.6603 1.0000 1.0000 4.6603 1.0000 
+Inv. sites prop:    0.3909
+Gamma shape:        1.1714
+Score:              11373.2144
+Weight:             0.4090
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2939
+Gamma:              0.2906
+Gamma-Inv:          0.4155
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.5165
+Alpha:              0.3548
+Alpha-P.Inv:        1.1908
+P.Inv-Alpha:        0.3928
+Frequencies:        0.2786 0.1430 0.2258 0.3525 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 010010 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model HKY+I+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m HKY+I+G4
+
+Partition 5/6
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:00:03
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+I              5     -3693.1973      7498.4350         0.0000    0.6250
+       2  HKY+G4             5     -3693.7218      7499.4841         1.0491    0.3699
+       3  HKY+I+G4           6     -3693.3348      7508.0468         9.6118    0.0051
+       4  GTR+I+G4          10     -3690.5884      7539.9009        41.4659    0.0000
+       5  HKY                4     -3726.7001      7556.1039        57.6689    0.0000
+       6  GTR+G4             9     -3703.7457      7556.8788        58.4437    0.0000
+       7  GTR                8     -3723.5438      7587.1383        88.7033    0.0000
+       8  F81+I              4     -3760.1374      7622.9786       124.5436    0.0000
+       9  F81+G4             4     -3760.8356      7624.3750       125.9399    0.0000
+      10  F81+I+G4           5     -3760.7471      7633.5347       135.0996    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              HKY+I
+lnL:                -3693.1973
+Frequencies:        0.3215 0.1316 0.2295 0.3174
+Subst. Rates:       1.0000 3.6119 1.0000 1.0000 3.6119 1.0000 
+Inv. sites prop:    0.3403
+Gamma shape:        -
+Score:              7498.4350
+Weight:             0.6250
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.6250
+Gamma:              0.3699
+Gamma-Inv:          0.0051
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3403
+Alpha:              0.7300
+Alpha-P.Inv:        1.0696
+P.Inv-Alpha:        0.1212
+Frequencies:        0.3216 0.1317 0.2298 0.3169 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 010010 -f m -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -c 1 -m GTRCATIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model HKY+I
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m HKY+I
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+I              5     -3693.1973      7410.3945         0.0000    0.4990
+       2  HKY+G4             5     -3693.7218      7411.4436         1.0491    0.2953
+       3  HKY+I+G4           6     -3693.3348      7412.6696         2.2751    0.1600
+       4  GTR+I+G4          10     -3690.5884      7415.1769         4.7823    0.0457
+       5  GTR+G4             9     -3703.7457      7439.4914        29.0969    0.0000
+       6  HKY                4     -3726.7001      7475.4001        65.0056    0.0000
+       7  GTR                8     -3723.5438      7477.0877        66.6932    0.0000
+       8  F81+I              4     -3760.1374      7542.2748       131.8803    0.0000
+       9  F81+G4             4     -3760.8356      7543.6712       133.2766    0.0000
+      10  F81+I+G4           5     -3760.7471      7545.4942       135.0996    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              HKY+I
+lnL:                -3693.1973
+Frequencies:        0.3215 0.1316 0.2295 0.3174
+Subst. Rates:       1.0000 3.6119 1.0000 1.0000 3.6119 1.0000 
+Inv. sites prop:    0.3403
+Gamma shape:        -
+Score:              7410.3945
+Weight:             0.4990
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.4990
+Gamma:              0.2953
+Gamma-Inv:          0.2057
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3403
+Alpha:              0.7300
+Alpha-P.Inv:        0.9969
+P.Inv-Alpha:        0.0997
+Frequencies:        0.3214 0.1316 0.2301 0.3169 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 010010 -f m -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -c 1 -m GTRCATIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model HKY+I
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m HKY+I
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+I              5     -3693.1973      7410.3945         0.0000    0.4990
+       2  HKY+G4             5     -3693.7218      7411.4436         1.0491    0.2953
+       3  HKY+I+G4           6     -3693.3348      7412.6696         2.2751    0.1600
+       4  GTR+I+G4          10     -3690.5884      7415.1769         4.7823    0.0457
+       5  GTR+G4             9     -3703.7457      7439.4914        29.0969    0.0000
+       6  HKY                4     -3726.7001      7475.4001        65.0056    0.0000
+       7  GTR                8     -3723.5438      7477.0877        66.6932    0.0000
+       8  F81+I              4     -3760.1374      7542.2748       131.8803    0.0000
+       9  F81+G4             4     -3760.8356      7543.6712       133.2766    0.0000
+      10  F81+I+G4           5     -3760.7471      7545.4942       135.0996    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              HKY+I
+lnL:                -3693.1973
+Frequencies:        0.3215 0.1316 0.2295 0.3174
+Subst. Rates:       1.0000 3.6119 1.0000 1.0000 3.6119 1.0000 
+Inv. sites prop:    0.3403
+Gamma shape:        -
+Score:              7410.3945
+Weight:             0.4990
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.4990
+Gamma:              0.2953
+Gamma-Inv:          0.2057
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3403
+Alpha:              0.7300
+Alpha-P.Inv:        0.9969
+P.Inv-Alpha:        0.0997
+Frequencies:        0.3214 0.1316 0.2301 0.3169 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 010010 -f m -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -c 1 -m GTRCATIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model HKY+I
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m HKY+I
+
+Partition 6/6
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:00:03
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+G4             5     -3000.1117      6112.2639         0.0000    0.9724
+       2  HKY+I              5     -3003.9613      6119.9630         7.6991    0.0207
+       3  HKY+I+G4           6     -3000.3935      6122.1642         9.9003    0.0069
+       4  GTR+G4             9     -3003.9587      6157.3047        45.0408    0.0000
+       5  GTR+I+G4          10     -3005.0574      6168.8388        56.5750    0.0000
+       6  GTR+I              9     -3016.2234      6181.8342        69.5703    0.0000
+       7  F81+G4             4     -3052.9060      6208.5158        96.2519    0.0000
+       8  HKY                4     -3053.3028      6209.3094        97.0456    0.0000
+       9  F81+I              4     -3053.7905      6210.2849        98.0210    0.0000
+      10  F81+I+G4           5     -3052.8355      6217.7115       105.4476    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              HKY+G4
+lnL:                -3000.1117
+Frequencies:        0.2652 0.1440 0.2449 0.3458
+Subst. Rates:       1.0000 3.8920 1.0000 1.0000 3.8920 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.4325
+Score:              6112.2639
+Weight:             0.9724
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0207
+Gamma:              0.9724
+Gamma-Inv:          0.0069
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.4548
+Alpha:              0.4325
+Alpha-P.Inv:        0.9500
+P.Inv-Alpha:        0.2753
+Frequencies:        0.2652 0.1440 0.2448 0.3459 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 010010 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model HKY+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m HKY+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+G4             5     -3000.1117      6024.2234         0.0000    0.7697
+       2  HKY+I+G4           6     -3000.3935      6026.7870         2.5636    0.2136
+       3  HKY+I              5     -3003.9613      6031.9225         7.6991    0.0164
+       4  GTR+G4             9     -3003.9587      6039.9174        15.6940    0.0003
+       5  GTR+I+G4          10     -3005.0574      6044.1148        19.8914    0.0000
+       6  GTR+I              9     -3016.2234      6064.4469        40.2235    0.0000
+       7  GTR                8     -3045.7420      6121.4841        97.2607    0.0000
+       8  F81+G4             4     -3052.9060      6127.8120       103.5886    0.0000
+       9  HKY                4     -3053.3028      6128.6056       104.3823    0.0000
+      10  F81+I              4     -3053.7905      6129.5811       105.3577    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              HKY+G4
+lnL:                -3000.1117
+Frequencies:        0.2652 0.1440 0.2449 0.3458
+Subst. Rates:       1.0000 3.8920 1.0000 1.0000 3.8920 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.4325
+Score:              6024.2234
+Weight:             0.7697
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0164
+Gamma:              0.7700
+Gamma-Inv:          0.2136
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.4548
+Alpha:              0.4325
+Alpha-P.Inv:        0.9499
+P.Inv-Alpha:        0.2753
+Frequencies:        0.2653 0.1440 0.2447 0.3460 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 010010 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model HKY+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m HKY+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+G4             5     -3000.1117      6024.2234         0.0000    0.7697
+       2  HKY+I+G4           6     -3000.3935      6026.7870         2.5636    0.2136
+       3  HKY+I              5     -3003.9613      6031.9225         7.6991    0.0164
+       4  GTR+G4             9     -3003.9587      6039.9174        15.6940    0.0003
+       5  GTR+I+G4          10     -3005.0574      6044.1148        19.8914    0.0000
+       6  GTR+I              9     -3016.2234      6064.4469        40.2235    0.0000
+       7  GTR                8     -3045.7420      6121.4841        97.2607    0.0000
+       8  F81+G4             4     -3052.9060      6127.8120       103.5886    0.0000
+       9  HKY                4     -3053.3028      6128.6056       104.3823    0.0000
+      10  F81+I              4     -3053.7905      6129.5811       105.3577    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              HKY+G4
+lnL:                -3000.1117
+Frequencies:        0.2652 0.1440 0.2449 0.3458
+Subst. Rates:       1.0000 3.8920 1.0000 1.0000 3.8920 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.4325
+Score:              6024.2234
+Weight:             0.7697
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0164
+Gamma:              0.7700
+Gamma-Inv:          0.2136
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.4548
+Alpha:              0.4325
+Alpha-P.Inv:        0.9499
+P.Inv-Alpha:        0.2753
+Frequencies:        0.2653 0.1440 0.2447 0.3460 
+
+Commands:
+  > phyml  -i allspecies_insertions.phy -m 010010 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s allspecies_insertions.phy -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa allspecies_insertions.phy --model HKY+G4
+  > paup -s allspecies_insertions.phy
+  > iqtree -s allspecies_insertions.phy -m HKY+G4
+Summary:
+
+Partition 1/6:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC              GTR+G4    24690.9162        0.9729
+       AIC              GTR+G4    24573.5288        0.6773
+      AICc              GTR+G4    24573.5288        0.6773
+
+Partition 2/6:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC              HKY+G4    12501.4997        0.9462
+       AIC              GTR+G4    12390.3204        0.7262
+      AICc              GTR+G4    12390.3204        0.7262
+
+Partition 3/6:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC              HKY+G4     9882.1476        0.7386
+       AIC            GTR+I+G4     9792.4349        0.4308
+      AICc            GTR+I+G4     9792.4349        0.4308
+
+Partition 4/6:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC               HKY+I    11461.9172        0.4944
+       AIC            HKY+I+G4    11373.2144        0.4090
+      AICc            HKY+I+G4    11373.2144        0.4090
+
+Partition 5/6:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC               HKY+I     7498.4350        0.6250
+       AIC               HKY+I     7410.3945        0.4990
+      AICc               HKY+I     7410.3945        0.4990
+
+Partition 6/6:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC              HKY+G4     6112.2639        0.9724
+       AIC              HKY+G4     6024.2234        0.7697
+      AICc              HKY+G4     6024.2234        0.7697
+
+Result partition files written to results.txt.part.*
+Execution results written to results.txt.out
+Starting tree written to results.txt.tree

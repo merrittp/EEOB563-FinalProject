@@ -1,12 +1,4 @@
-#NEXUS
-[saved by seaview on Mon Apr 27 17:48:22 2020]
-BEGIN DATA;
-  DIMENSIONS NTAX=5 NCHAR=11348;
-  FORMAT DATATYPE=DNA
-  GAP=-
-  ;
-MATRIX
-[1] amphimedon_compressa_nucleotides
+>amphimedon_compressa_nucleotides
 -----------tgttagtattaatgag---------------tgacgaacggaagactcg
 gaggttata-ttaagaacgtaagaaaattaacgaaattaggccagagaata---------
 ----gacgaaggcngagttttcaaaggaaaacaaaggacac-------gggcctcattcc
@@ -197,7 +189,7 @@ cgactggcgcccacgggggacatgtcttagtaggtagtacatttttatttgtatgtcttt
 gtagattaataaagcaccagtatactagacaccatcatttaggctttgaagcggccgcat
 gatattgacattttgtagatgtagtctgattatttctttttatctttatgtattggtggg
 gctcataa
-[2] amphimedon_queenslandica_nucleotides
+>amphimedon_queenslandica_nucleotides
 c--------caaattagtgaaaaagtg---------------caatagagggatggctag
 ggca------ttaagcaaggggacaaatcaagggggttaggaggtaagtagactaatccc
 agctggtaaaagccggctcgttcgggttgaaatataaacgggcgag--gggacccg----
@@ -388,7 +380,7 @@ caaccggggcgcatggtgcgcatgtaattatcgggagcactttcctgggggtttgtttgg
 tacgattggcatataatcaattctctcggggtcgacacttagggtttgaggcggcagcat
 ggtattgacattttgtggatgtggtctgattatttctatacatttttatgtattggtggg
 gttcataa
-[3] niphates_erecta_nucleotides
+>niphates_erecta_nucleotides
 gttcaatcataagttaatgataataagatagttaataattgataacagacggaggactgg
 ggtgtaat--tagaagatggagtgacg-----aaaactggcaacaagaaaa---------
 ----gatgaaggctaaattc-----ggggaaaccggagggctctaggaggggcctggtca
@@ -579,7 +571,7 @@ ctactggagcacatggagcgcatgtattagtgggaagttctttcttgttggtatgtttgg
 tgcgattatacttgtatgagtttactcaagaacatcatttaggatttgaagctgccgcgt
 ggtactgacattttgtagatgtggtctggttgtttttatttgtatttatgtattgatggg
 ggtattag
-[4] niphates_digitalis_nucleotides
+>niphates_digitalis_nucleotides
 -------------------------------------------------tggaggactag
 ggtgtaat--tataagatggaatgatg-----aaaataggcaacaagaaaa---------
 ----gatgagggctaaattc-----agggaaaccggagggtatta----------ggcta
@@ -770,7 +762,7 @@ ctactggagcacatgggatgcatgtattagtagggagttcttttttgttggtttgtttgg
 tgcgattatatttgtatgaatttactcaagaacatcatttaggatttgaagctgccgcgt
 ggtattgacattttgtagatgtagtttggttgtttttatttgtatttatgtattgatggg
 ggtattag
-[5] xestospongia_muta_nucleotides
+>xestospongia_muta_nucleotides
 -----------aattagtataaatggg---------------taacaaatggaggactag
 gatgttatatttaaggacggtattaat--aacgaaatcggcaaggagatac---------
 ----gatgaaagctgaatttcctaaagggaaaccataaagg-------ggcgtctgtctc
@@ -961,5 +953,3 @@ caactggtgctcatggggggcatgtattagttggtagttcatttttattagtgtgtttgg
 gtagactaataaatcatcaatttactagacatcatcatttagggtttgaagctgcagcct
 gatattgacattttgtggatgttgtttgattatttctttttgtatttatgtattgatggg
 gttcataa
-;
-END;
