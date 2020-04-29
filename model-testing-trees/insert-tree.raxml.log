@@ -1,0 +1,152 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 29-Apr-2020 16:07:15 as follows:
+
+raxml-ng --msa allspecies_insertions.phy --model insert-partitions.txt --prefix insert-tree --seed 5 --threads 5 --tree pars{30},rand{30}
+
+Analysis options:
+  run mode: ML tree search
+  start tree(s): random (30) + parsimony (30)
+  random seed: 5
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX
+  parallelization: PTHREADS (5 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: allspecies_insertions.phy
+[00:00:00] Loaded alignment with 5 taxa and 11347 sites
+
+Alignment comprises 6 partitions and 1793 patterns
+
+Partition 0: rnl
+Model: GTR+FO+G4m+B
+Alignment sites / patterns: 4395 / 563
+Gaps: 36.07 %
+Invariant sites: 69.26 %
+
+Partition 1: rns
+Model: GTR+FO+G4m+B
+Alignment sites / patterns: 2131 / 327
+Gaps: 34.83 %
+Invariant sites: 66.17 %
+
+Partition 2: cob
+Model: GTR+FO+I+G4m+B
+Alignment sites / patterns: 1287 / 260
+Gaps: 7.91 %
+Invariant sites: 55.32 %
+
+Partition 3: cox1
+Model: HKY+FO+I+G4m+B
+Alignment sites / patterns: 1632 / 247
+Gaps: 2.98 %
+Invariant sites: 62.32 %
+
+Partition 4: cox2
+Model: HKY+FO+I+B
+Alignment sites / patterns: 1105 / 233
+Gaps: 23.62 %
+Invariant sites: 59.73 %
+
+Partition 5: cox3
+Model: HKY+FO+G4m+B
+Alignment sites / patterns: 797 / 163
+Gaps: 1.00 %
+Invariant sites: 55.96 %
+
+
+NOTE: Binary MSA file created: insert-tree.raxml.rba
+
+[00:00:00] Generating 30 random starting tree(s) with 5 taxa
+[00:00:00] Generating 30 parsimony starting tree(s) with 5 taxa
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 2 / 497 / 5184
+
+Starting ML tree search with 60 distinct starting trees
+
+[00:00:00] ML tree search #1, logLikelihood: -35782.548957
+[00:00:00] ML tree search #2, logLikelihood: -35782.579999
+[00:00:01] ML tree search #3, logLikelihood: -35782.548957
+[00:00:02] ML tree search #4, logLikelihood: -35782.440903
+[00:00:02] ML tree search #5, logLikelihood: -35782.399063
+[00:00:02] ML tree search #6, logLikelihood: -35782.399063
+[00:00:03] ML tree search #7, logLikelihood: -35782.441767
+[00:00:04] ML tree search #8, logLikelihood: -35782.367526
+[00:00:04] ML tree search #9, logLikelihood: -35782.639730
+[00:00:04] ML tree search #10, logLikelihood: -35782.577221
+[00:00:05] ML tree search #11, logLikelihood: -35782.440903
+[00:00:05] ML tree search #12, logLikelihood: -35782.379972
+[00:00:06] ML tree search #13, logLikelihood: -35782.395993
+[00:00:06] ML tree search #14, logLikelihood: -35782.379972
+[00:00:07] ML tree search #15, logLikelihood: -35782.379972
+[00:00:08] ML tree search #16, logLikelihood: -35782.548957
+[00:00:08] ML tree search #17, logLikelihood: -35782.548957
+[00:00:08] ML tree search #18, logLikelihood: -35782.579999
+[00:00:09] ML tree search #19, logLikelihood: -35782.441767
+[00:00:09] ML tree search #20, logLikelihood: -35782.395993
+[00:00:10] ML tree search #21, logLikelihood: -35782.639730
+[00:00:10] ML tree search #22, logLikelihood: -35782.373356
+[00:00:11] ML tree search #23, logLikelihood: -35782.441767
+[00:00:12] ML tree search #24, logLikelihood: -35782.438440
+[00:00:12] ML tree search #25, logLikelihood: -35782.440903
+[00:00:13] ML tree search #26, logLikelihood: -35782.433394
+[00:00:14] ML tree search #27, logLikelihood: -35782.438440
+[00:00:14] ML tree search #28, logLikelihood: -35782.438440
+[00:00:15] ML tree search #29, logLikelihood: -35782.441767
+[00:00:16] ML tree search #30, logLikelihood: -35782.441767
+[00:00:16] ML tree search #31, logLikelihood: -35782.577945
+[00:00:16] ML tree search #32, logLikelihood: -35782.639570
+[00:00:16] ML tree search #33, logLikelihood: -35782.640119
+[00:00:17] ML tree search #34, logLikelihood: -35782.644493
+[00:00:17] ML tree search #35, logLikelihood: -35782.576527
+[00:00:17] ML tree search #36, logLikelihood: -35782.574887
+[00:00:18] ML tree search #37, logLikelihood: -35782.637846
+[00:00:18] ML tree search #38, logLikelihood: -35782.577945
+[00:00:18] ML tree search #39, logLikelihood: -35782.576328
+[00:00:18] ML tree search #40, logLikelihood: -35782.578050
+[00:00:19] ML tree search #41, logLikelihood: -35782.580270
+[00:00:19] ML tree search #42, logLikelihood: -35782.576689
+[00:00:19] ML tree search #43, logLikelihood: -35782.576711
+[00:00:20] ML tree search #44, logLikelihood: -35782.578058
+[00:00:20] ML tree search #45, logLikelihood: -35782.576973
+[00:00:20] ML tree search #46, logLikelihood: -35782.638923
+[00:00:20] ML tree search #47, logLikelihood: -35782.643985
+[00:00:21] ML tree search #48, logLikelihood: -35782.578058
+[00:00:21] ML tree search #49, logLikelihood: -35782.577047
+[00:00:21] ML tree search #50, logLikelihood: -35782.575833
+[00:00:22] ML tree search #51, logLikelihood: -35782.575580
+[00:00:22] ML tree search #52, logLikelihood: -35782.578053
+[00:00:22] ML tree search #53, logLikelihood: -35782.575270
+[00:00:22] ML tree search #54, logLikelihood: -35782.576226
+[00:00:23] ML tree search #55, logLikelihood: -35782.644493
+[00:00:23] ML tree search #56, logLikelihood: -35782.575580
+[00:00:23] ML tree search #57, logLikelihood: -35782.574939
+[00:00:24] ML tree search #58, logLikelihood: -35782.576924
+[00:00:24] ML tree search #59, logLikelihood: -35782.642880
+[00:00:24] ML tree search #60, logLikelihood: -35782.575833
+
+
+Final LogLikelihood: -35782.367526
+
+AIC score: 71676.735053 / AICc score: 71677.300509 / BIC score: 72087.590738
+Free parameters (model + branch lengths): 56
+
+Best ML tree saved to: /home/merrittp/EEOB563-Spring2020-Project/EEOB563-FinalProject/model-testing-trees/insert-tree.raxml.bestTree
+All ML trees saved to: /home/merrittp/EEOB563-Spring2020-Project/EEOB563-FinalProject/model-testing-trees/insert-tree.raxml.mlTrees
+Optimized model saved to: /home/merrittp/EEOB563-Spring2020-Project/EEOB563-FinalProject/model-testing-trees/insert-tree.raxml.bestModel
+
+Execution log saved to: /home/merrittp/EEOB563-Spring2020-Project/EEOB563-FinalProject/model-testing-trees/insert-tree.raxml.log
+
+Analysis started: 29-Apr-2020 16:07:15 / finished: 29-Apr-2020 16:07:40
+
+Elapsed time: 24.662 seconds
+
