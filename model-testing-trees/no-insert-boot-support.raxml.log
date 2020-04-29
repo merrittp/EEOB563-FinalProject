@@ -1,0 +1,32 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 29-Apr-2020 15:55:02 as follows:
+
+raxml-ng --support --tree no-insert-tree.raxml.bestTree --bs-trees no-insert-boot.raxml.bootstraps --prefix no-insert-boot-support --threads 4
+
+Analysis options:
+  run mode: Compute bipartition support (Felsenstein Bootstrap)
+  start tree(s): user
+  random seed: 1588193702
+  SIMD kernels: AVX
+  parallelization: PTHREADS (4 threads), thread pinning: OFF
+
+Reading reference tree from file: no-insert-tree.raxml.bestTree
+Reference tree size: 5
+
+Reading bootstrap trees from file: no-insert-boot.raxml.bootstraps
+Loaded 50 trees with 5 taxa.
+
+Best ML tree with Felsenstein bootstrap (FBP) support values saved to: /home/merrittp/EEOB563-Spring2020-Project/EEOB563-FinalProject/model-testing-trees/no-insert-boot-support.raxml.support
+
+Execution log saved to: /home/merrittp/EEOB563-Spring2020-Project/EEOB563-FinalProject/model-testing-trees/no-insert-boot-support.raxml.log
+
+Analysis started: 29-Apr-2020 15:55:02 / finished: 29-Apr-2020 15:55:02
+
+Elapsed time: 0.007 seconds
+
